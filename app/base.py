@@ -4,7 +4,7 @@ import cv2
 
 class FaceDetect:
 
-    @staticmethod
+
     def get_face():
 
         # 训练集位置
@@ -29,18 +29,22 @@ class FaceDetect:
                 minSize=(30, 30)
             )
 
-            # print("Found {0} Faces! in the Picture".format(len(faces)))
 
+            # print("Found {0} Faces! in the Picture".format(len(faces)))
+            cv2.putText(image, "FaceNum:"+str(len(faces)), (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(image, "Press 'Q' to Quit!", (250,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             # 画框
             for (x, y, w, h) in faces:
                 pixel_1 = int(w/2+x)
                 pixel_2 = int(y-h/5)
                 cv2.rectangle(image, (x, y), (x + w, y + w), (0, 255, 0), 2)
-                cv2.putText(image, "face", (pixel_1,pixel_2), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 3)
+                cv2.putText(image, "face", (pixel_1,pixel_2), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             cv2.imshow("Faces found", cv2.resize(image, (1024, 768)))
             if cv2.waitKey(1) == ord('q'):
                 flag = 1
                 break;
 
+    @staticmethod
 
+    
 
