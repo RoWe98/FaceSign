@@ -1,12 +1,12 @@
 # FaceSign
-基于人脸识别技术的智能签到系统
+FaceDetect and FaceSign System based on Rasbperry4
 
-## 功能介绍
+## Function
 
-- 人脸识别
-- 人脸签到
-- 通过人脸开启门锁
+- FaceRecognition
+- FaceDetect
+- FaceSign
 
-## 依赖
+## Requirement
 
 - ```opencv```

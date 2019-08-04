@@ -7,10 +7,10 @@ class FaceDetect:
     @staticmethod
     def get_face():
 
-        # get training set file
+        # 训练集位置
         cascPath = "haarcascade_frontalface_default.xml"
 
-        # load training set file
+        # 读取训练集
         faceCascade = cv2.CascadeClassifier(cascPath)
 
         # Read the image
