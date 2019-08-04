@@ -44,7 +44,6 @@ class FaceDetect:
                 flag = 1
                 break;
 
-    @staticmethod
 
     
 
