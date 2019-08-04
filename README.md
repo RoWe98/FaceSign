@@ -1,2 +1,3 @@
 # FaceSign
-基于人脸识别技术的智能人脸签到系统
+
+FaceSign FaceDetect FaceRecognition
