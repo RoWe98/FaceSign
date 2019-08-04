@@ -1,9 +1,5 @@
-from facebase import Ui_MainWindow
-from PyQt5.QtWidgets import *
-import sys
+from base import FaceDetect
 
 if __name__ == "__main__":
-    App = QApplication(sys.argv)
-    win = Ui_MainWindow()
-    win.show()
-    sys.exit(App.exec_())
+	
+	FaceDetect.get_face()

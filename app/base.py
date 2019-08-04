@@ -4,7 +4,7 @@ import cv2
 
 class FaceDetect:
 
-
+    @staticmethod
     def get_face():
 
         # 训练集位置
