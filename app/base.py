@@ -55,11 +55,8 @@ class FaceDetect:
                 face_id = FaceUtil.lockopen()
                 face_id_list.insert(0,face_id)
 
-<<<<<<< HEAD
             # elif cv2.waitKey(1) == ord('q'):
             #     flag = 1
             #     break;
-=======
->>>>>>> 953a1afeb66ca3ff7d5e20423e8e2aa0b8d8867c
 
 
