@@ -16,11 +16,11 @@ class FaceDetect:
         self.face_path = "../image/face.jpg"
 
     def face_judge(self):
-        try:
-            image = base64.b64encode(open(self.face_path, 'rb').read())
-            result = self.client_baidu_face.search(image, self.imageType, self.groupIdList);
-            face_id = result['result']['user_list'][0]['user_id']  # 对JSON进行分析获取图片ID(学号
-            print(face_id)
-            return True, face_id
-        except Exception:
-            pass
+        # try:
+        image = base64.b64encode(open(self.face_path, 'rb').read())
+        result = self.client_baidu_face.search(image, self.imageType, self.groupIdList);
+        face_id = result['result']['user_list'][0]['user_id']  # 对JSON进行分析获取图片ID(学号
+        print(face_id)
+        return True, face_id
+        # except Exception:
+        #    pass

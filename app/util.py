@@ -32,12 +32,12 @@ class FaceUtil:
 
         facedetect = FaceDetect()
         face_flag, face_id = facedetect.face_judge()
-        face_id_list.append(face_id)
 
         if face_id not in face_id_list:
-
+            face_id_list.append(face_id)
             if(face_flag):
                 print("人脸识别成功，开始解锁")
+                print("已经识别完成，id为:"+face_id)
 
         else:
 

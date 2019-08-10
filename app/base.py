@@ -34,7 +34,7 @@ class FaceDetect:
 
             # print("Found {0} Faces! in the Picture".format(len(faces)))
             cv2.putText(image, "FaceNum:"+str(len(faces)), (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            cv2.putText(image, "Press 'Q' to Quit!", (250,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(image, "Press 'Ctrl+C' to Quit!", (250,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             # draw the square
             for (x, y, w, h) in faces:
                 pixel_1 = int(w/2+x)
@@ -44,16 +44,14 @@ class FaceDetect:
                 
             cv2.imshow("Faces found", cv2.resize(image, (1024, 768)))
 
-            if cv2.waitKey(1) == ord('q'):
-                flag = 1
-                break;
+            if cv2.waitKey(1) == ord('s'):
 
-            elif cv2.waitKey(1) == ord('s'):
                 face_pixel = FaceUtil.get_face_pixel(faces)
                 FaceUtil.screenshot(image,face_pixel)
                 face_id = FaceUtil.lockopen()
 
-                cv2.putText(image, "FaceID"+face_id, (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-                cv2.imshow("Faces found", cv2.resize(image, (1024, 768)))
+            # elif cv2.waitKey(1) == ord('q'):
+            #     flag = 1
+            #     break;
 
 
